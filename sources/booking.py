@@ -3,7 +3,7 @@ import requests
 
 
 class BookingPage:
-  BOOKING_PARAMS = "?checkin=%s&checkout=%s&group_adults=2&group_children=0&no_rooms=1"
+  BOOKING_PARAMS = "?checkin=%s&checkout=%s&group_adults=2&group_children=0&no_rooms=1&selected_currency=BRL"
   HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
   }
