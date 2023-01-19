@@ -1,9 +1,7 @@
-
 from datetime import datetime
 from datetime import timedelta
 import pandas as pd
 import streamlit as st
-from multiprocessing import Pool
 from sources.booking import BookingPage
 # Paleta em https://coolors.co/palette/ffbe0b-fb5607-ff006e-8338ec-3a86ff
 
@@ -136,13 +134,13 @@ if submitted:
 
   fridays = all_fridays(starting_day, maximum_day)
   for friday in fridays:
+    hotels_bp = []
     checkin = friday.to_pydatetime().date()
     checkout = checkin + timedelta(days=2)
     checkin_tz = "%sT00:00:00" % str(checkin)
 
-    pool = Pool(2)
-    params = [(checkin, checkout, hotel_url) for hotel_url in hotel_url_list]
-    hotels_bp = pool.starmap(BookingPage, params)
+    for hotel_url in hotel_url_list:
+      hotels_bp.append(BookingPage(checkin, checkout, hotel_url))
 
     if i == 0:
       line_chart = deploy_line_chart([hbp.hotel_name for hbp in hotels_bp])
