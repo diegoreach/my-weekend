@@ -120,7 +120,7 @@ with st.sidebar:
       height = 190, 
       placeholder = "https://www.booking.com/hotel/...\nhttps://www.booking.com/hotel/..."
     )
-    submitted = st.form_submit_button("Partiu!")
+    submitted = st.form_submit_button("Partiu!", type="primary", help="Encontrar fim de semana mais barato")
 
 if submitted:
   hotel_url_list = [hotel_url.strip() for hotel_url in hotels_urls.splitlines()]
