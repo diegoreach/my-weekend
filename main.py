@@ -147,7 +147,7 @@ if submitted:
 
     for bp in hotels_bp:
       if i == 0:
-        main.write('<h3><a href="' + bp.hotel_url + '" target="_blank" style="color:#3A86FF;">' + bp.hotel_name + '</a></h3>', unsafe_allow_html=True)
+        main.write('<h3><a href="' + bp.hotel_url + '?aid=7980550" target="_blank" style="color:#3A86FF;">' + bp.hotel_name + '</a></h3>', unsafe_allow_html=True)
         main.image(bp.image_url, width=600)
 
         metric_cols[bp.hotel_url] = main.columns(1)[0]
