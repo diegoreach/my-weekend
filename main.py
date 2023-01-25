@@ -19,7 +19,7 @@ def header(container):
   container.write(
     """
       <span style="font-size:1.2rem;">
-        Insira ao lado os links dos Resorts / Hotéis do Booking.com e o #MeuFimDeSemana
+        Insira ao lado os links dos Resorts / Hotéis do <a href="https://www.booking.com/index.html?aid=7980550" style="color:#3A86FF;" target="_blank">Booking.com</a> e o #MeuFimDeSemana
         encontrará o fim de semana mais barato para você.
       </span>""", 
     unsafe_allow_html=True
