@@ -89,7 +89,7 @@ def deploy_line_chart(hotel_names):
 
 st.set_page_config(
   page_title='#MeuFimDeSemana', 
-  page_icon='https://cdn-icons-png.flaticon.com/512/5448/5448390.png'
+  page_icon='https://cdn-icons-png.flaticon.com/512/9389/9389581.png'
 )
 
 header_container = st.container()
